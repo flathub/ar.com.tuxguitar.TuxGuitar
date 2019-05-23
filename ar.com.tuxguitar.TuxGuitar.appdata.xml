@@ -3,7 +3,7 @@
 	<id>ar.com.tuxguitar.TuxGuitar</id>
     <metadata_license>CC0-1.0</metadata_license>
 	<project_license>GPL-2.0</project_license>
-	<name>Tuxguitar</name>
+	<name>TuxGuitar</name>
 	<summary>TuxGuitar is a free and open-source tablature editor.</summary>
 	<description>
         <p>TuxGuitar is a free and open-source tablature editor, which includes features such as tablature editing,</p> 
@@ -15,8 +15,15 @@
         <p>TuxGuitar 1.2 was released in 2009. Its source code was steadily updated through 2015, culminating in</p> 
         <p>the release of version 1.3.0 in January 2016</p>
 	</description>
-	<url type="homepage">http://tuxguitar.com.ar/</url>
-	<url type="help">http://www.tuxguitar.com.ar/tgwiki/doku.php</url>
+	<categories>
+          <category>Audio</category>
+          <category>Music</category>
+        </categories>
+	<url type="homepage">http://tuxguitar.com.ar</url>
+        <url type="donation">http://www.tuxguitar.com.ar/donate.html</url>
+        <url type="help">http://www.tuxguitar.com.ar/forums.html</url>
+        <url type="faq">http://www.tuxguitar.com.ar/tgwiki/doku.php</url>
+        <url type="bugtracker">https://github.com/flathub/ar.com.tuxguitar.TuxGuitar/issues</url>
 	<launchable type="desktop-id">ar.com.tuxguitar.TuxGuitar.desktop</launchable>
 	<releases>
 		<release version="1.5" date="2018-02-02">
