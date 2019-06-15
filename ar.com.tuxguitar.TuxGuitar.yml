@@ -41,14 +41,14 @@ modules:
       - type: file
         only-arches:
           - x86_64
-        url: https://sourceforge.net/projects/tuxguitar/files/TuxGuitar/TuxGuitar-1.5.2/tuxguitar-1.5.2-linux-qt4-x86_64.tar.gz/download
-        sha256: aab95dbe91633904c26aefdef1f75a785e01cd76423fcc2c6933f0ce2bc8dd71
+        url: https://sourceforge.net/projects/tuxguitar/files/TuxGuitar/TuxGuitar-1.5.2/tuxguitar-1.5.2-linux-x86_64.tar.gz/download
+        sha256: 298555a249adb3ad72f3aef72a124e30bfa01cd069c7b5d152a738140e7903a2
         dest-filename: tuxguitar-x84_64.tar.gz
       - type: file
         only-arches:
           - i386
-        url: https://sourceforge.net/projects/tuxguitar/files/TuxGuitar/TuxGuitar-1.5.2/tuxguitar-1.5.2-linux-qt4-x86.tar.gz/download
-        sha256: f92d9ecf72d71b47e986e5915600b50d2f4e62dacace29eff864160f263f2a88
+        url: https://sourceforge.net/projects/tuxguitar/files/TuxGuitar/TuxGuitar-1.5.2/tuxguitar-1.5.2-linux-x86.tar.gz/download
+        sha256: 27675c358db237df74d20e8676000c25a87b9de0bb0a6d1c325e8d6db807d296
         dest-filename: tuxguitar-x84.tar.gz
       - type: file
         path: tuxguitar.sh
