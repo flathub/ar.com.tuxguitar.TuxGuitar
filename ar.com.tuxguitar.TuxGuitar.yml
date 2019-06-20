@@ -20,7 +20,6 @@ finish-args:
   - --env=PATH=/usr/bin:/app/bin:/app/jre/bin
   - --env=JAVA_HOME=/app/jre
   - --env=JAVA=/app/jre/bin/java
-  - --env=APP_HOME_PATH=/app
 modules:
   - name: openjdk
     buildsystem: simple
