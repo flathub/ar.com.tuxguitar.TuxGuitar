@@ -1,9 +1,11 @@
 [Desktop Entry]
 Name=Tuxguitar
-GenericName=TuxGuitar is a free and open-source tablature editor.
-Exec=tuxguitar
+GenericName=TuxGuitar
+Comment=TuxGuitar is a free and open-source tablature editor.
+Exec=tuxguitar %F
 Terminal=false
 Type=Application
 Icon=ar.com.tuxguitar.TuxGuitar
 Categories=Audio;Music;AudioVideo;
 Keywords=tuxguitar;guitar;music;
+StartupNotify=false
