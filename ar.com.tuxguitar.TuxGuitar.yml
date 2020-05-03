@@ -1,6 +1,6 @@
 app-id: ar.com.tuxguitar.TuxGuitar
 runtime: org.freedesktop.Platform
-runtime-version: '18.08'
+runtime-version: '19.08'
 sdk: org.freedesktop.Sdk
 sdk-extensions:
   - org.freedesktop.Sdk.Extension.openjdk11
@@ -30,7 +30,7 @@ modules:
     buildsystem: simple
     build-commands:
       - mkdir -p /app/bin
-      - tar -xf tuxguitar*.tar.gz --strip 1 --exclude=tuxguitar.sh -C /app/
+      - tar -xf tuxguitar-1.5.3-linux-x86*.tar.gz --strip 1 --exclude=tuxguitar.sh -C /app/
       - install -Dm644 /app/share/skins/Oxygen/icon-64x64.png /app/share/icons/hicolor/64x64/apps/ar.com.tuxguitar.TuxGuitar.png
       - install -Dm644 /app/share/skins/Oxygen/icon-96x96.png /app/share/icons/hicolor/96x96/apps/ar.com.tuxguitar.TuxGuitar.png
       - install -Dm644 ar.com.tuxguitar.TuxGuitar.desktop -t /app/share/applications
@@ -40,15 +40,13 @@ modules:
       - type: file
         only-arches:
           - x86_64
-        url: https://sourceforge.net/projects/tuxguitar/files/TuxGuitar/TuxGuitar-1.5.2/tuxguitar-1.5.2-linux-x86_64.tar.gz/download
-        sha256: 298555a249adb3ad72f3aef72a124e30bfa01cd069c7b5d152a738140e7903a2
-        dest-filename: tuxguitar-x84_64.tar.gz
+        url: https://downloads.sourceforge.net/project/tuxguitar/TuxGuitar/TuxGuitar-1.5.3/tuxguitar-1.5.3-linux-x86_64.tar.gz
+        sha256: f2c83f1544e55ca456219087dde5a52ca8d1daee147d44510b2c78aeaea1748f
       - type: file
         only-arches:
           - i386
-        url: https://sourceforge.net/projects/tuxguitar/files/TuxGuitar/TuxGuitar-1.5.2/tuxguitar-1.5.2-linux-x86.tar.gz/download
-        sha256: 27675c358db237df74d20e8676000c25a87b9de0bb0a6d1c325e8d6db807d296
-        dest-filename: tuxguitar-x84.tar.gz
+        url: https://downloads.sourceforge.net/project/tuxguitar/TuxGuitar/TuxGuitar-1.5.3/tuxguitar-1.5.3-linux-x86.tar.gz
+        sha256: 055777325e35b8c40b3a8594581cc143ab744e69575de6746fb5ad25ba14bafb
       - type: file
         path: tuxguitar.sh
       - type: file

@@ -27,4 +27,4 @@ VM_ARGS="-Xmx512m"
 export CLASSPATH
 export LD_LIBRARY_PATH
 
-${JAVA} ${VM_ARGS} -cp :${CLASSPATH} -Dtuxguitar.share.path="/app/share/" -Djava.library.path="${LD_LIBRARY_PATH}" ${MAINCLASS} "$1" "$2"
+${JAVA} ${VM_ARGS} -cp :${CLASSPATH} -Dtuxguitar.home.path="/app" -Dtuxguitar.share.path="/app/share/" -Djava.library.path="${LD_LIBRARY_PATH}" ${MAINCLASS} "$1" "$2"
