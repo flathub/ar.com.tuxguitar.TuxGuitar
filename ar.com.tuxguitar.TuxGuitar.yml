@@ -11,7 +11,11 @@ finish-args:
   - --socket=pulseaudio
   - --share=network
   - --filesystem=host
-  - --device=dri
+  # Device all for ALSA MIDI access. dri included.
+  - --device=all
+  # Pipewire for JACK
+  - --filesystem=xdg-run/pipewire-0
+  - --socket=system-bus
   - --talk-name=ca.desrt.dconf
   - --filesystem=xdg-run/dconf
   - --filesystem=~/.config/dconf:ro
@@ -24,6 +28,8 @@ modules:
     buildsystem: simple
     build-commands:
       - /usr/lib/sdk/openjdk11/install.sh
+
+  - shared-modules/linux-audio/fluidsynth2.json
 
   - name: tuxguitar
     buildsystem: simple
