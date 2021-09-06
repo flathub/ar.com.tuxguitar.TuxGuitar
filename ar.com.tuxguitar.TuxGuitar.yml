@@ -1,6 +1,6 @@
 app-id: ar.com.tuxguitar.TuxGuitar
 runtime: org.freedesktop.Platform
-runtime-version: '20.08'
+runtime-version: '21.08'
 sdk: org.freedesktop.Sdk
 sdk-extensions:
   - org.freedesktop.Sdk.Extension.openjdk11
@@ -15,7 +15,7 @@ finish-args:
   - --device=all
   # Pipewire for JACK
   - --filesystem=xdg-run/pipewire-0
-  - --socket=system-bus
+  - --system-talk-name=org.freedesktop.RealtimeKit1
   - --talk-name=ca.desrt.dconf
   - --filesystem=xdg-run/dconf
   - --filesystem=~/.config/dconf:ro
