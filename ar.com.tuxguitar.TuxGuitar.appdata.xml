@@ -32,6 +32,7 @@
   <url type="bugtracker">https://github.com/flathub/ar.com.tuxguitar.TuxGuitar/issues</url>
   <launchable type="desktop-id">ar.com.tuxguitar.TuxGuitar.desktop</launchable>
   <releases>
+    <release version="1.5.5" date="2022-02-12" />
     <release version="1.5.4" date="2020-05-12" />
     <release version="1.5.3" date="2019-12-10" />
     <release version="1.5.2" date="2019-02-28" />
