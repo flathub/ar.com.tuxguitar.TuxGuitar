@@ -26,5 +26,6 @@ VM_ARGS="-Xmx512m"
 
 export CLASSPATH
 export LD_LIBRARY_PATH
+export LV2_PATH=${LV2_PATH:-$HOME/.lv2:/app/extensions/Plugins/lv2:/app/lib/lv2}
 
 ${JAVA} ${VM_ARGS} -cp :${CLASSPATH} -Dtuxguitar.home.path="/app" -Dtuxguitar.share.path="/app/share/" -Djava.library.path="${LD_LIBRARY_PATH}" ${MAINCLASS} "$1" "$2"

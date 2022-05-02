@@ -23,12 +23,25 @@ finish-args:
   - --env=PATH=/usr/bin:/app/bin:/app/jre/bin
   - --env=JAVA_HOME=/app/jre
   - --env=JAVA=/app/jre/bin/java
+  - --env=VST_PATH=/app/extensions/Plugins/vst
+
+add-extensions:
+    org.freedesktop.LinuxAudio.Plugins:
+        directory: 'extensions/Plugins'
+        version: '21.08'
+        add-ld-path: lib
+        merge-dirs: 'lv2;vst'
+        subdirectories: true
+        no-autodownload: true
+
 modules:
   - name: openjdk
     buildsystem: simple
     build-commands:
       - /usr/lib/sdk/openjdk11/install.sh
 
+  - shared-modules/linux-audio/lv2.json
+  - shared-modules/linux-audio/lilv.json
   - shared-modules/linux-audio/fluidsynth2.json
 
   - name: tuxguitar
@@ -41,12 +54,13 @@ modules:
       - install -Dm644 ar.com.tuxguitar.TuxGuitar.desktop -t /app/share/applications
       - install -Dm644 ar.com.tuxguitar.TuxGuitar.appdata.xml -t /app/share/metainfo
       - install -D tuxguitar.sh /app/bin/tuxguitar
+      - install -d /app/extensions/Plugins
     sources:
       - type: file
         only-arches:
           - x86_64
-        url: https://downloads.sourceforge.net/project/tuxguitar/TuxGuitar/TuxGuitar-1.5.5/tuxguitar-1.5.5-linux-x86_64.tar.gz
-        sha256: 9a3e70550958db117376e96f31d6f941be471b0afb444973224a4e2e36807c60
+        url: https://downloads.sourceforge.net/project/tuxguitar/TuxGuitar/TuxGuitar-1.5.6/tuxguitar-1.5.6-linux-x86_64.tar.gz
+        sha256: 6953de2a979d41404ae9f10d3703940aa82bc0196e98dddeaeb70107ce0d837c
       - type: file
         path: tuxguitar.sh
       - type: file
