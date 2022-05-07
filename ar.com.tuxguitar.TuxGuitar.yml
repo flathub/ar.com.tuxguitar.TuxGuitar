@@ -10,7 +10,7 @@ finish-args:
   - --socket=x11
   - --socket=pulseaudio
   - --share=network
-  - --filesystem=host
+  - --filesystem=home
   # Device all for ALSA MIDI access. dri included.
   - --device=all
   # Pipewire for JACK
