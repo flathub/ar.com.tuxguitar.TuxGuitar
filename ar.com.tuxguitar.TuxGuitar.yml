@@ -38,7 +38,18 @@ modules:
 
   - shared-modules/linux-audio/lv2.json
   - shared-modules/linux-audio/lilv.json
-  - shared-modules/linux-audio/fluidsynth2.json
+
+  # Can't use the shared-modules because 2.2.x is .so.3 and this want to dlopen
+  # libfluidsynth.so.2
+  - name: fluidsynth
+    buildsystem: cmake-ninja
+    config-opts:
+      - -DLIB_SUFFIX=
+      - -DCMAKE_BUILD_TYPE=Release
+    sources:
+      - type: archive
+        url: https://github.com/FluidSynth/fluidsynth/archive/refs/tags/v2.1.9.tar.gz
+        sha256: 365642cc64bafe0491149ad643ef7327877f99412d5abb93f1fa54e252028484
 
   - name: tuxguitar
     buildsystem: simple
