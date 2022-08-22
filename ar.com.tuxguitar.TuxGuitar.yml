@@ -15,11 +15,7 @@ finish-args:
   - --device=all
   # Pipewire for JACK
   - --filesystem=xdg-run/pipewire-0
-  - --system-talk-name=org.freedesktop.RealtimeKit1
-  - --talk-name=ca.desrt.dconf
-  - --filesystem=xdg-run/dconf
-  - --filesystem=~/.config/dconf:ro
-  - --env=DCONF_USER_CONFIG_DIR=.config/dconf
+  - --metadata=X-DConf=migrate-path=/ar/com/tuxguitar/TuxGuitar/
   - --env=PATH=/usr/bin:/app/bin:/app/jre/bin
   - --env=JAVA_HOME=/app/jre
   - --env=JAVA=/app/jre/bin/java
