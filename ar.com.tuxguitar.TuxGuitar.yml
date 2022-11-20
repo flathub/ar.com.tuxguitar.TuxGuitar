@@ -1,6 +1,6 @@
 app-id: ar.com.tuxguitar.TuxGuitar
 runtime: org.freedesktop.Platform
-runtime-version: '21.08'
+runtime-version: '22.08'
 sdk: org.freedesktop.Sdk
 sdk-extensions:
   - org.freedesktop.Sdk.Extension.openjdk11
@@ -24,7 +24,7 @@ finish-args:
 add-extensions:
     org.freedesktop.LinuxAudio.Plugins:
         directory: 'extensions/Plugins'
-        version: '21.08'
+        version: '22.08'
         add-ld-path: lib
         merge-dirs: 'lv2;vst'
         subdirectories: true
