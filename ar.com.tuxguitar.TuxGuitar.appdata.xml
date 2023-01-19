@@ -18,11 +18,7 @@
   <screenshots>
     <screenshot type="default">
       <caption>Screnshoot 1</caption>
-	<image type="source">http://www.tuxguitar.com.ar/images/galleries/pictures/1_47.png</image>
-    </screenshot>
-    <screenshot>
-      <caption>Screenshoot 2</caption>
-	<image type="source">http://www.tuxguitar.com.ar/images/galleries/pictures/1_49.png</image>
+	<image type="source">https://a.fsdn.com/con/app/proj/tuxguitar/screenshots/tuxguitar-1.5.png/max/max/1</image>
     </screenshot>
   </screenshots>
   <url type="homepage">http://tuxguitar.com.ar</url>
