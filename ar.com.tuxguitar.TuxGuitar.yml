@@ -68,6 +68,11 @@ modules:
           - x86_64
         url: https://downloads.sourceforge.net/project/tuxguitar/TuxGuitar/TuxGuitar-1.5.6/tuxguitar-1.5.6-linux-x86_64.tar.gz
         sha256: 6953de2a979d41404ae9f10d3703940aa82bc0196e98dddeaeb70107ce0d837c
+        x-data-checker:
+          type: anitya
+          project-id: 8413
+          is-main-source: true
+          url-template: https://downloads.sourceforge.net/project/tuxguitar/TuxGuitar/TuxGuitar-$version/tuxguitar-$version-linux-x86_64.tar.gz
       - type: file
         path: tuxguitar.sh
       - type: file
