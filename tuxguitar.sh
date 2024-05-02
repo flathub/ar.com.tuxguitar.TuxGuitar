@@ -1,31 +1,19 @@
 #!/bin/sh
-
-LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/app/lib/
-LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/app/jre/lib/
-LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/usr/lib
-CLASSPATH=${CLASSPATH}:/app/lib/tuxguitar.jar
-CLASSPATH=${CLASSPATH}:/app/lib/tuxguitar-ui-toolkit.jar
-CLASSPATH=${CLASSPATH}:/app/lib/tuxguitar-ui-toolkit-swt.jar
-CLASSPATH=${CLASSPATH}:/app/lib/tuxguitar-lib.jar
-CLASSPATH=${CLASSPATH}:/app/lib/tuxguitar-editor-utils.jar
-CLASSPATH=${CLASSPATH}:/app/lib/tuxguitar-gm-utils.jar
-CLASSPATH=${CLASSPATH}:/app/lib/tuxguitar-awt-graphics.jar
-CLASSPATH=${CLASSPATH}:/app/lib/swt.jar
-CLASSPATH=${CLASSPATH}:/app/lib/gervill.jar
-CLASSPATH=${CLASSPATH}:/app/lib/itext-pdf.jar
-CLASSPATH=${CLASSPATH}:/app/lib/itext-xmlworker.jar
-CLASSPATH=${CLASSPATH}:/app/lib/commons-compress.jar
-CLASSPATH=${CLASSPATH}:/app/lib/icedtea-sound.jar
-CLASSPATH=${CLASSPATH}:/app/share/
-CLASSPATH=${CLASSPATH}:/app/dist/
-
+##SCRIPT DIR
+TG_DIR=/app
+##LIBRARY_PATH
+LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:${TG_DIR}/lib/
+##CLASSPATH
+CLASSPATH=${CLASSPATH}:${TG_DIR}/lib/*
+CLASSPATH=${CLASSPATH}:${TG_DIR}/share/
+CLASSPATH=${CLASSPATH}:${TG_DIR}/dist/
 ##MAINCLASS
 MAINCLASS=org.herac.tuxguitar.app.TGMainSingleton
 ##JVM ARGUMENTS
 VM_ARGS="-Xmx512m"
-
+##EXPORT VARS
 export CLASSPATH
 export LD_LIBRARY_PATH
 export LV2_PATH=${LV2_PATH:-$HOME/.lv2:/app/extensions/Plugins/lv2:/app/lib/lv2}
-
-${JAVA} ${VM_ARGS} -cp :${CLASSPATH} -Dtuxguitar.home.path="/app" -Dtuxguitar.share.path="/app/share/" -Djava.library.path="${LD_LIBRARY_PATH}" ${MAINCLASS} "$1" "$2"
+##LAUNCH
+${JAVA} ${VM_ARGS} -cp :${CLASSPATH} -Dtuxguitar.home.path="${TG_DIR}" -Dtuxguitar.share.path="share/" -Djava.library.path="${LD_LIBRARY_PATH}" ${MAINCLASS} "$@"
