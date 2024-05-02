@@ -3,11 +3,14 @@ runtime: org.freedesktop.Platform
 runtime-version: '23.08'
 sdk: org.freedesktop.Sdk
 sdk-extensions:
-  - org.freedesktop.Sdk.Extension.openjdk11
+  - org.freedesktop.Sdk.Extension.openjdk17
 command: tuxguitar
 finish-args:
   - --share=ipc
   - --socket=x11
+  # Access to wayland
+  - --socket=fallback-x11
+  - --socket=wayland
   - --socket=pulseaudio
   - --share=network
   - --filesystem=home
@@ -19,64 +22,53 @@ finish-args:
   - --env=PATH=/usr/bin:/app/bin:/app/jre/bin
   - --env=JAVA_HOME=/app/jre
   - --env=JAVA=/app/jre/bin/java
-  - --env=VST_PATH=/app/extensions/Plugins/vst
 
 add-extensions:
     org.freedesktop.LinuxAudio.Plugins:
         directory: 'extensions/Plugins'
         version: '23.08'
         add-ld-path: lib
-        merge-dirs: 'lv2;vst'
+        merge-dirs: 'lv2'
         subdirectories: true
         no-autodownload: true
+
 
 modules:
   - name: openjdk
     buildsystem: simple
     build-commands:
-      - /usr/lib/sdk/openjdk11/install.sh
+      - /usr/lib/sdk/openjdk17/install.sh
 
   - shared-modules/linux-audio/lv2.json
   - shared-modules/linux-audio/lilv.json
-
-  # Can't use the shared-modules because 2.2.x is .so.3 and this want to dlopen
-  # libfluidsynth.so.2
-  - name: fluidsynth
-    buildsystem: cmake-ninja
-    config-opts:
-      - -DLIB_SUFFIX=
-      - -DCMAKE_BUILD_TYPE=Release
-    sources:
-      - type: archive
-        url: https://github.com/FluidSynth/fluidsynth/archive/refs/tags/v2.1.9.tar.gz
-        sha256: 365642cc64bafe0491149ad643ef7327877f99412d5abb93f1fa54e252028484
+  - shared-modules/linux-audio/fluidsynth2.json
 
   - name: tuxguitar
     buildsystem: simple
     build-commands:
-      - mkdir -p /app/bin
-      - tar -xf tuxguitar-*-linux-x86*.tar.gz --strip 1 --exclude=tuxguitar.sh -C /app/
-      - install -Dm644 /app/share/skins/Oxygen/icon-64x64.png /app/share/icons/hicolor/64x64/apps/ar.com.tuxguitar.TuxGuitar.png
-      - install -Dm644 ar.com.tuxguitar.TuxGuitar.png -t /app/share/icons/hicolor/256x256/apps
-      - install -Dm644 ar.com.tuxguitar.TuxGuitar.desktop -t /app/share/applications
-      - install -Dm644 ar.com.tuxguitar.TuxGuitar.metainfo.xml -t /app/share/metainfo/
-      - install -D tuxguitar.sh /app/bin/tuxguitar
-      - install -d /app/extensions/Plugins
+      - mkdir -p "${FLATPAK_DEST}/bin"
+      - tar -xf tuxguitar-*-linux-swt-x86_64.tar.gz --strip 1 --exclude=tuxguitar.sh -C "${FLATPAK_DEST}/"
+      - install -Dm0644 "${FLATPAK_ID}.png" -t "${FLATPAK_DEST}/share/icons/hicolor/256x256/apps"
+      - install -Dm0644 "${FLATPAK_ID}.metainfo.xml" -t "${FLATPAK_DEST}/share/metainfo/"
+      - install -Dm0644 "${FLATPAK_DEST}/share/skins/Oxygen/icon.png" "${FLATPAK_DEST}/share/icons/hicolor/96x96/apps/${FLATPAK_ID}.png"
+      - install -D tuxguitar.sh "${FLATPAK_DEST}/bin/tuxguitar"
+      - install -Dm0644 "${FLATPAK_DEST}/share/applications/tuxguitar.desktop" "${FLATPAK_DEST}/share/applications/${FLATPAK_ID}.desktop"
+      - desktop-file-edit --set-key=Exec --set-value='tuxguitar %F' "${FLATPAK_DEST}/share/applications/${FLATPAK_ID}.desktop"
+      - desktop-file-edit --set-icon="${FLATPAK_ID}" "${FLATPAK_DEST}/share/applications/${FLATPAK_ID}.desktop"
+      - install -d "${FLATPAK_DEST}/extensions/Plugins"
     sources:
       - type: file
         only-arches:
           - x86_64
-        url: https://downloads.sourceforge.net/project/tuxguitar/TuxGuitar/TuxGuitar-1.5.6/tuxguitar-1.5.6-linux-x86_64.tar.gz
-        sha256: 6953de2a979d41404ae9f10d3703940aa82bc0196e98dddeaeb70107ce0d837c
+        url: https://github.com/helge17/tuxguitar/releases/download/1.6.2/tuxguitar-1.6.2-linux-swt-x86_64.tar.gz
+        sha256: 3a4b3500031953ae03bf09ff508ea50b583c0d7dfe6f37ea16635b167adb0bc6
         x-data-checker:
-          type: anitya
-          project-id: 8413
-          is-main-source: true
-          url-template: https://downloads.sourceforge.net/project/tuxguitar/TuxGuitar/TuxGuitar-$version/tuxguitar-$version-linux-x86_64.tar.gz
+          type: json
+          url: https://api.github.com/repos/helge17/tuxguitar/releases/latest
+          url-query: .assets[] | select(.name=="tuxguitar-" + $version + "-linux-swt-x86_64.tar.gz")
+            | .browser_download_url
       - type: file
         path: tuxguitar.sh
-      - type: file
-        path: ar.com.tuxguitar.TuxGuitar.desktop
       - type: file
         path: ar.com.tuxguitar.TuxGuitar.png
       - type: file
