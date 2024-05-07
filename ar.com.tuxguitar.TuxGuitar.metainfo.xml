@@ -9,7 +9,7 @@
     <p>
       TuxGuitar is a free and open-source tablature editor, which includes features such as tablature editing,
       score editing, import of Guitar Pro (gtp, gp3, gp4, gp5, gpx, gp), PowerTab and TablEdit files,
-      export of Guitar pro (gp3, gp4, gp4), Lilypond, pdf, image and audio files. In addition, TuxGuitar's
+      export of Guitar pro (gp3, gp4, gp5), Lilypond, pdf, image and audio files. In addition, TuxGuitar's
       tablature and staff interfaces function as basic MIDI editors.
       TuxGuitar's mascot and namesake is Tux, the penguin mascot of many games and programs originally designed
       for Linux. The program is written in the Java programming language and is released under version 2.1 of
