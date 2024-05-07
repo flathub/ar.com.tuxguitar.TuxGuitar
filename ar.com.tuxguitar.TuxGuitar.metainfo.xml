@@ -18,8 +18,8 @@
   </description>
   <screenshots>
     <screenshot type="default">
-      <caption>Screnshoot 1</caption>
-	<image type="source">https://a.fsdn.com/con/app/proj/tuxguitar/screenshots/tuxguitar-1.5.png/max/max/1</image>
+      <caption>Tablature editor main window</caption>
+	<image type="source">https://github.com/helge17/tuxguitar/blob/3a4ba2c1b2d170d9f356e1c380821564afa332fe/misc/Screenshot_Oxygen.png</image>
     </screenshot>
   </screenshots>
   <url type="homepage">https://github.com/helge17/tuxguitar</url>
