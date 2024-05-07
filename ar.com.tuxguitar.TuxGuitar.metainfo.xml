@@ -19,7 +19,7 @@
   <screenshots>
     <screenshot type="default">
       <caption>Tablature editor main window</caption>
-	<image type="source">https://github.com/helge17/tuxguitar/blob/3a4ba2c1b2d170d9f356e1c380821564afa332fe/misc/Screenshot_Oxygen.png</image>
+	<image type="source">https://github.com/helge17/tuxguitar/blob/3a4ba2c1b2d170d9f356e1c380821564afa332fe/misc/Screenshot_Oxygen.png?raw=true</image>
     </screenshot>
   </screenshots>
   <url type="homepage">https://github.com/helge17/tuxguitar</url>
