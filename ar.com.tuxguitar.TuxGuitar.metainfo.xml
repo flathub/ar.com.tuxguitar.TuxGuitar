@@ -27,7 +27,7 @@
   <url type="bugtracker">https://github.com/flathub/ar.com.tuxguitar.TuxGuitar/issues</url>
   <launchable type="desktop-id">ar.com.tuxguitar.TuxGuitar.desktop</launchable>
   <releases>
-    <release version="1.6.3" date="2024-06-06" />
+    <release version="1.6.3" date="2024-06-06">
       <description>
         <p>Improved button in toolbar for tuplets</p>
         <p>"Currently played beat" highlight improved</p>
@@ -36,6 +36,7 @@
         <p>Improved MusicXML, MIDI and PDF export</p>
         <p>Many small improvements, cleanups and bug fixes</p>
       </description>
+    </release>
     <release version="1.6.2" date="2024-04-03" />
     <release version="1.6.1" date="2024-02-02" />
     <release version="1.6.0" date="2023-09-16" />
