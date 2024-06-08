@@ -2,13 +2,14 @@
 <component type="desktop-application">
   <id>ar.com.tuxguitar.TuxGuitar</id>
   <metadata_license>CC0-1.0</metadata_license>
-  <project_license>GPL-2.0</project_license>
+  <project_license>LGPL-2.1-only</project_license>
   <name>TuxGuitar</name>
   <summary>TuxGuitar is a free and open-source tablature editor.</summary>
   <description>
     <p>
       TuxGuitar is a free and open-source tablature editor, which includes features such as tablature editing,
-      score editing, and import and export of Guitar Pro gp3, gp4, and gp5 files.In addition, TuxGuitar's
+      score editing, import of Guitar Pro (gtp, gp3, gp4, gp5, gpx, gp), PowerTab and TablEdit files,
+      export of Guitar pro (gp3, gp4, gp5), Lilypond, pdf, image and audio files. In addition, TuxGuitar's
       tablature and staff interfaces function as basic MIDI editors.
       TuxGuitar's mascot and namesake is Tux, the penguin mascot of many games and programs originally designed
       for Linux. The program is written in the Java programming language and is released under version 2.1 of
@@ -17,8 +18,8 @@
   </description>
   <screenshots>
     <screenshot type="default">
-      <caption>Screnshoot 1</caption>
-	<image type="source">https://a.fsdn.com/con/app/proj/tuxguitar/screenshots/tuxguitar-1.5.png/max/max/1</image>
+      <caption>Tablature editor main window</caption>
+	<image type="source">https://github.com/helge17/tuxguitar/blob/3a4ba2c1b2d170d9f356e1c380821564afa332fe/misc/Screenshot_Oxygen.png?raw=true</image>
     </screenshot>
   </screenshots>
   <url type="homepage">https://github.com/helge17/tuxguitar</url>
@@ -26,6 +27,16 @@
   <url type="bugtracker">https://github.com/flathub/ar.com.tuxguitar.TuxGuitar/issues</url>
   <launchable type="desktop-id">ar.com.tuxguitar.TuxGuitar.desktop</launchable>
   <releases>
+    <release version="1.6.3" date="2024-06-06">
+      <description>
+        <p>Improved button in toolbar for tuplets</p>
+        <p>"Currently played beat" highlight improved</p>
+        <p>Made caret more visible</p>
+        <p>Adapated copy-paste function to better handle different tuning presets</p>
+        <p>Improved MusicXML, MIDI and PDF export</p>
+        <p>Many small improvements, cleanups and bug fixes</p>
+      </description>
+    </release>
     <release version="1.6.2" date="2024-04-03" />
     <release version="1.6.1" date="2024-02-02" />
     <release version="1.6.0" date="2023-09-16" />
@@ -53,8 +64,8 @@
        </description>
      </release>
   </releases>
-  <developer_name>Julian Gabriel Casadesus</developer_name>
-  <update_contact>cgabrielsu_AT_gmail.com</update_contact>
+  <developer_name>Julian Gabriel Casadesus and others</developer_name>
+  <update_contact>info_AT_tuxguitar.app</update_contact>
   <content_rating type="oars-1.0">
       <content_attribute id="violence-cartoon">none</content_attribute>
       <content_attribute id="violence-fantasy">none</content_attribute>

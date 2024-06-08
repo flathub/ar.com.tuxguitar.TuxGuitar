@@ -47,7 +47,7 @@ modules:
     buildsystem: simple
     build-commands:
       - mkdir -p "${FLATPAK_DEST}/bin"
-      - tar -xf tuxguitar-*-linux-swt-x86_64.tar.gz --strip 1 --exclude=tuxguitar.sh -C "${FLATPAK_DEST}/"
+      - tar -xf tuxguitar-*-linux-swt-amd64.tar.gz --strip 1 --exclude=tuxguitar.sh -C "${FLATPAK_DEST}/"
       - install -Dm0644 "${FLATPAK_ID}.png" -t "${FLATPAK_DEST}/share/icons/hicolor/256x256/apps"
       - install -Dm0644 "${FLATPAK_ID}.metainfo.xml" -t "${FLATPAK_DEST}/share/metainfo/"
       - install -Dm0644 "${FLATPAK_DEST}/share/skins/Oxygen/icon.png" "${FLATPAK_DEST}/share/icons/hicolor/96x96/apps/${FLATPAK_ID}.png"
@@ -60,12 +60,12 @@ modules:
       - type: file
         only-arches:
           - x86_64
-        url: https://github.com/helge17/tuxguitar/releases/download/1.6.2/tuxguitar-1.6.2-linux-swt-x86_64.tar.gz
-        sha256: 3a4b3500031953ae03bf09ff508ea50b583c0d7dfe6f37ea16635b167adb0bc6
+        url: https://github.com/helge17/tuxguitar/releases/download/1.6.3/tuxguitar-1.6.3-linux-swt-amd64.tar.gz
+        sha256: 78ed94e851533b3dac47f64dd809ae8b60ec58c19c7c59052772e1833cabe9a3
         x-data-checker:
           type: json
           url: https://api.github.com/repos/helge17/tuxguitar/releases/latest
-          url-query: .assets[] | select(.name=="tuxguitar-" + $version + "-linux-swt-x86_64.tar.gz")
+          url-query: .assets[] | select(.name=="tuxguitar-" + $version + "-linux-swt-amd64.tar.gz")
             | .browser_download_url
       - type: file
         path: tuxguitar.sh
