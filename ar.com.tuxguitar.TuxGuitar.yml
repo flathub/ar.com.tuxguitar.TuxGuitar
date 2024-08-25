@@ -7,7 +7,6 @@ sdk-extensions:
 command: tuxguitar
 finish-args:
   - --share=ipc
-  - --socket=x11
   # Access to wayland
   - --socket=fallback-x11
   - --socket=wayland
