@@ -19,7 +19,7 @@
   <screenshots>
     <screenshot type="default">
       <caption>Tablature editor main window</caption>
-	<image type="source">https://github.com/helge17/tuxguitar/blob/3a4ba2c1b2d170d9f356e1c380821564afa332fe/misc/Screenshot_Oxygen.png?raw=true</image>
+	<image type="source">https://github.com/helge17/tuxguitar/blob/847b17e077aeb420e8977d3a6c52a460362fff8a/misc/Screenshot_Oxygen.png?raw=true</image>
     </screenshot>
   </screenshots>
   <url type="homepage">https://github.com/helge17/tuxguitar</url>
@@ -27,6 +27,15 @@
   <url type="bugtracker">https://github.com/flathub/ar.com.tuxguitar.TuxGuitar/issues</url>
   <launchable type="desktop-id">ar.com.tuxguitar.TuxGuitar.desktop</launchable>
   <releases>
+    <release version="1.6.4" date="2024-08-23">
+      <description>
+        <p>Fixed performance issue on newer Linux versions</p>
+        <p>Updated Polish and Russian translations</p>
+        <p>Reworked file open/save/import/export behaviour</p>
+        <p>Improved notes names display on fretboard</p>
+        <p>Many small improvements, cleanups and bug fixes</p>
+      </description>
+    </release>
     <release version="1.6.3" date="2024-06-06">
       <description>
         <p>Improved button in toolbar for tuplets</p>
