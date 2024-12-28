@@ -27,6 +27,16 @@
   <url type="bugtracker">https://github.com/flathub/ar.com.tuxguitar.TuxGuitar/issues</url>
   <launchable type="desktop-id">ar.com.tuxguitar.TuxGuitar.desktop</launchable>
   <releases>
+    <release version="1.6.6" date="2024-12-27">
+      <description>
+        <p>Add zoom control for Print/Export to pdf</p>
+        <p>Improve GP and tef v2 import </p>
+        <p>Restore scrollbars during playback</p>
+        <p>Save/restore player mode when switching tabs</p>
+        <p>Export only audible tracks to MIDI and audio files</p>
+        <p>Minor improvements and cleanups</p>
+      </description>
+    </release>
     <release version="1.6.4" date="2024-08-23">
       <description>
         <p>Fixed performance issue on newer Linux versions</p>
