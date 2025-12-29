@@ -27,6 +27,18 @@
   <url type="bugtracker">https://github.com/flathub/ar.com.tuxguitar.TuxGuitar/issues</url>
   <launchable type="desktop-id">ar.com.tuxguitar.TuxGuitar.desktop</launchable>
   <releases>
+    <release version="2.0.1" date="2025-12-27">
+      <description>
+        <p>new file format</p>
+        <p>new "free edition mode" authorizing invalid measures</p>
+        <p>possibility to add line breaks</p>
+        <p>possibility to force enharmonic representation of notes</p>
+        <p>base duration for tempo is now configurable</p>
+        <p>main toolbar reworked, and fully configurable</p>
+        <p>better handling of tied notes</p>
+        <p>many small improvements and cleanups</p>
+      </description>
+    </release>
     <release version="1.6.6" date="2024-12-27">
       <description>
         <p>Add zoom control for Print/Export to pdf</p>
