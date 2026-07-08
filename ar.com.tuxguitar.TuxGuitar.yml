@@ -20,6 +20,8 @@ finish-args:
   - --env=PATH=/usr/bin:/app/bin:/app/jre/bin
   - --env=JAVA_HOME=/app/jre
   - --env=JAVA=/app/jre/bin/java
+cleanup:
+  - /share/man
 
 add-extensions:
     org.freedesktop.LinuxAudio.Plugins:
@@ -37,7 +39,6 @@ modules:
     build-commands:
       - /usr/lib/sdk/openjdk17/install.sh
 
-  - shared-modules/linux-audio/lv2.json
   - shared-modules/linux-audio/lilv.json
   - shared-modules/linux-audio/fluidsynth2.json
 
