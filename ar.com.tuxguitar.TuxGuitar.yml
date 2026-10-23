@@ -59,8 +59,8 @@ modules:
       - type: file
         only-arches:
           - x86_64
-        url: https://github.com/helge17/tuxguitar/releases/download/2.1.0/tuxguitar-2.1.0-linux-swt-amd64.tar.gz
-        sha256: ca898ac6f151fa2537323209646068f5bb09d72fa6ad0cd08e7055291cb13dd0
+        url: https://github.com/helge17/tuxguitar/releases/download/2.1.1/tuxguitar-2.1.1-linux-swt-amd64.tar.gz
+        sha256: 1760749650b940847ec7f0fe968fdaa7ae1e42d4aae6a63b623f4aabbf4115f1
         x-data-checker:
           type: json
           url: https://api.github.com/repos/helge17/tuxguitar/releases/latest

@@ -27,8 +27,12 @@
   <url type="bugtracker">https://github.com/flathub/ar.com.tuxguitar.TuxGuitar/issues</url>
   <launchable type="desktop-id">ar.com.tuxguitar.TuxGuitar.desktop</launchable>
   <releases>
-    <release version="2.1.0" date="2026-06-30">
+    <release version="2.1.1" date="2026-10-23">
       <description>
+        <p>Add tonic note highlighting on fretboard</p>
+        <p>Improve Guitar Pro import</p>
+        <p>Export beat text in MusicXML</p>
+        <p>Do not discard undo history when saving song</p>
         <p>Allow continuous scrolling when playing</p>
         <p>Add anticipation to discrete scrolling when playing</p>
         <p>Security fix for CVE-2026-55543</p>
@@ -44,6 +48,7 @@
         <p>Add search by key binding in Key Binding Editor</p>
         <p>Add "Discard All" option when closing with multiple unsaved documents</p>
         <p>Support XDG_CONFIG_HOME and XDG_CACHE_HOME on Linux</p>
+        <p>Bug fixes</p>
         <p>More small improvements and cleanups</p>
       </description>
     </release>
