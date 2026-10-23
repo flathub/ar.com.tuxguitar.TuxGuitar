@@ -51,7 +51,7 @@ modules:
       - install -Dm0644 "${FLATPAK_ID}.metainfo.xml" -t "${FLATPAK_DEST}/share/metainfo/"
       - install -Dm0644 "${FLATPAK_DEST}/share/skins/Oxygen/icon.png" "${FLATPAK_DEST}/share/icons/hicolor/96x96/apps/${FLATPAK_ID}.png"
       - install -D tuxguitar.sh "${FLATPAK_DEST}/bin/tuxguitar"
-      - install -Dm0644 "${FLATPAK_DEST}/share/applications/tuxguitar.desktop" "${FLATPAK_DEST}/share/applications/${FLATPAK_ID}.desktop"
+      - install -Dm0644 "${FLATPAK_DEST}/share/applications/TuxGuitar.desktop" "${FLATPAK_DEST}/share/applications/${FLATPAK_ID}.desktop"
       - desktop-file-edit --set-key=Exec --set-value='tuxguitar %F' "${FLATPAK_DEST}/share/applications/${FLATPAK_ID}.desktop"
       - desktop-file-edit --set-icon="${FLATPAK_ID}" "${FLATPAK_DEST}/share/applications/${FLATPAK_ID}.desktop"
       - install -d "${FLATPAK_DEST}/extensions/Plugins"
@@ -59,8 +59,8 @@ modules:
       - type: file
         only-arches:
           - x86_64
-        url: https://github.com/helge17/tuxguitar/releases/download/2.0.1/tuxguitar-2.0.1-linux-swt-amd64.tar.gz
-        sha256: a6c5adfe0cc573925e15e77fdb1ccda4c01a82661e6c038e29279d001b7f6ea3
+        url: https://github.com/helge17/tuxguitar/releases/download/2.1.1/tuxguitar-2.1.1-linux-swt-amd64.tar.gz
+        sha256: 1760749650b940847ec7f0fe968fdaa7ae1e42d4aae6a63b623f4aabbf4115f1
         x-data-checker:
           type: json
           url: https://api.github.com/repos/helge17/tuxguitar/releases/latest
